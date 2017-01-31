@@ -1,6 +1,6 @@
 // Actions
 export const addToCart = (item) => {
-  console.log('adding item:', item)
+  console.log('Adding item:', item)
   return {
     type: 'add',
     item

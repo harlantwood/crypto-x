@@ -14,12 +14,9 @@ class App extends Component {
       <div className='App'>
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to uPort</h2>
+          <h2>Welcome to Crypto-X</h2>
         </div>
-        <div className='App-intro'>
-          <Cart />
-        </div>
-        <div>If you don't have the uPort App yet, please Signup for our Alpha</div>
+        <Cart />
       </div>
     )
   }

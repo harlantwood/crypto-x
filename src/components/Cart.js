@@ -10,28 +10,20 @@ import * as CartActions from '../actions/CartActions'
 import Shelf from './Shelf'
 
 class Cart extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
-
   render () {
-    // console.log('CARTJSCOMPONENTCARTJSCOMPONENTCARTJSCOMPONENT')
-    // console.log({cartjsProps: this.props})
-    // console.log({cartjsState: this.state})
     return (
       <div className='Cart'>
         <Shelf addItem={this.props.actions.addToCart} />
-        <h2>Shopping Bag</h2>
+        <h2>Shopping Cart</h2>
         <ol>
           {
-            this.props.cart
+            this.props.chosenItems
               ? (
-                this.props.cart.map((item, idx) => (
+                this.props.chosenItems.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))
               )
-              : null
+              : 'ERROR: this.props.chosenItems is not available'
           }
         </ol>
       </div>
@@ -41,7 +33,7 @@ class Cart extends Component {
 
 function mapStateToProps (state, props) {
   return {
-    cart: state.cart
+    chosenItems: state.Cart.chosenItems
   }
 }
 function mapDispatchToProps (dispatch) {
