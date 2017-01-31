@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import './App.css'
 
 // Components
-import Cart from './components/Cart'
+// import Cart from './components/Cart'
 import Navbar from './components/Navbar'
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
             <h6>This is a test application built by the uPort team to demonstrate the log-in and credentialing functionalities of our uPort libraries.</h6>
             <hr />
           </div>
-          <Cart />
+          {/* <Cart /> */}
         </div>
       </div>
     )

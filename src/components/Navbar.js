@@ -9,12 +9,14 @@ import * as UIActions from '../actions/UIActions'
 class Navbar extends Component {
   render () {
     return (
-      <nav className='navbar navbar-toggleable-md navbar-inverse'>
-        <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation'>
-          <span className='navbar-toggler-icon' />
-        </button>
-        <a className='navbar-brand' href='#'><h3>Crypto-X</h3></a>
-        <div className='collapse navbar-collapse d-flex' id='navbarsExampleDefault'>
+      <nav className='navbar navbar-toggleable-md navbar-inverse d-flex flex-row'>
+        {/*
+          <button className='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation'>
+            <span className='navbar-toggler-icon' />
+          </button>
+        */}
+        <a className='navbar-brand p-2' href='#'><h3>Crypto-X</h3></a>
+        <div className='collapse navbar-collapse d-flex flex-row ml-auto p-2' id='navbarsExampleDefault'>
           <button
             onClick={() => window.alert('SIGNIN FIRE')}
             className='btn btn-primary btn-md ml-auto p-2'>SIGN IN</button>
