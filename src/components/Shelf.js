@@ -36,7 +36,7 @@ class Shelf extends Component {
 
 function mapStateToProps (state, props) {
   return {
-    availableItems: state.Cart.availableItems
+    availableItems: state.App.availableItems
   }
 }
 // function mapDispatchToProps (dispatch) {

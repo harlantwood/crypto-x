@@ -33,7 +33,7 @@ class Cart extends Component {
 
 function mapStateToProps (state, props) {
   return {
-    chosenItems: state.Cart.chosenItems
+    chosenItems: state.App.chosenItems
   }
 }
 function mapDispatchToProps (dispatch) {
