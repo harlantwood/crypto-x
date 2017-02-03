@@ -2,7 +2,7 @@
 export const addToCart = (item) => {
   console.log('Adding item:', item)
   return {
-    type: 'add',
+    type: 'ADD_ITEM',
     item
   }
 }

@@ -2,12 +2,15 @@
 import React, { Component } from 'react'
 
 // Assets
-// import logo from './logo.svg'
+import chart from './chart.png'
 import './App.css'
 
 // Components
 // import Cart from './components/Cart'
 import Navbar from './components/Navbar'
+
+// import { Connect } from 'uport-connect'
+// const uport = new Connect('CryptoX')
 
 class App extends Component {
   render () {
@@ -21,6 +24,7 @@ class App extends Component {
             <h4>Welcome to Crypto X</h4>
             <h6>This is a test application built by the uPort team to demonstrate the log-in and credentialing functionalities of our uPort libraries.</h6>
             <hr />
+            <img alt='chart' src={chart} style={{maxWidth: '100%'}}/>
           </div>
           {/* <Cart /> */}
         </div>

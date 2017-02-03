@@ -5,3 +5,10 @@ export const connectUport = (data) => {
     data
   }
 }
+
+export const showLoggedInUser = (data) => {
+  return {
+    type: 'LOGIN_USER',
+    data
+  }
+}
