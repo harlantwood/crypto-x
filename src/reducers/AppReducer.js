@@ -1,19 +1,7 @@
-let initialState = {
-  // availableItems: [
-  //   'shampoo',
-  //   'chocolate',
-  //   'yogurt'
-  // ],
-  // chosenItems: []
-}
+let initialState = {}
 
 export default(state = initialState, payload) => {
   switch (payload.type) {
-    // case 'ADD_ITEM':
-    //   return {
-    //     availableItems: initialState.availableItems,
-    //     chosenItems: [ ...state.chosenItems, payload.item ]
-    //   }
     case 'CONNECT_UPORT':
       return {
         ...state,
