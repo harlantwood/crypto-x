@@ -6,8 +6,12 @@ import { bindActionCreators } from 'redux'
 // Actions
 import * as AppActions from '../actions/AppActions'
 
-import { Connect } from 'uport-connect'
-const uport = new Connect('CryptoX')
+import { Connect, SimpleSigner } from 'uport-connect'
+const uport = new Connect('CryptoX', {
+  clientId: '0xe2fef711a5988fbe84b806d4817197f033dde050',
+  notifications: true,
+  signer: SimpleSigner('4894506ba6ed1a2d21cb11331620784ad1ff9adf1676dc2720de5435dcf76ac2')
+})
 
 class Navbar extends Component {
 
@@ -20,7 +24,7 @@ class Navbar extends Component {
   signInbtnClick () {
     console.log(uport)
     uport
-      .requestCredentials()
+      .requestCredentials({requested: ['name', 'phone', 'country']})
       .then((credentials) => {
         this.props.actions.connectUport(credentials)
         console.log(this.props, this.state)
@@ -28,12 +32,7 @@ class Navbar extends Component {
   }
 
   credentialsbtnClick () {
-    uport
-      .requestCredentials()
-      .then((credentials) => {
-        this.props.actions.connectUport(credentials)
-        console.log(this.props, this.state)
-      })
+    uport.attestCredentials({sub: this.props.uport.address, claim: {name: this.props.uport.name}, exp: new Date().getTime() + 2592000000}) // 30days
   }
 
   render () {
