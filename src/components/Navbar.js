@@ -85,7 +85,8 @@ class Navbar extends Component {
                     </span>
                   </div>
                   <span>&nbsp;&nbsp;</span>
-                  <img
+                  {this.props.uport.image
+                   ? <img
                     style={{
                       display: 'inline-block',
                       borderRadius: '50%',
@@ -97,6 +98,7 @@ class Navbar extends Component {
                     src={
                       'https://ipfs.infura.io' +
                       this.props.uport.image.contentUrl} />
+                  : null }
 
                 </div>
               )
