@@ -51,7 +51,7 @@
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
-    "uport-connect": "^0.4.4"
+    "uport-connect": "^0.4.5"
   },
   "scripts": {
     "start": "node scripts/start.js",

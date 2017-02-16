@@ -5186,9 +5186,9 @@ unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
-uport-connect@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/uport-connect/-/uport-connect-0.4.4.tgz#a9315076b91ea014aa412a18e2c999fd57e2791d"
+uport-connect@^0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/uport-connect/-/uport-connect-0.4.5.tgz#d2f907b8289c4554cb96ce2aa78312129d5c8b29"
   dependencies:
     async "^2.1.4"
     ethjs-abi "^0.1.8"
@@ -5202,12 +5202,19 @@ uport-connect@^0.4.4:
     qs "^6.2.1"
     request "^2.75.0"
     uport "^0.3.1"
-    uport-lite "^0.2.2"
+    uport-lite "^0.2.3"
     web3 "^0.18.2"
 
 uport-lite@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/uport-lite/-/uport-lite-0.2.2.tgz#6128542902fa2b1dc558d42da17c1a405a06960c"
+  dependencies:
+    base-x-bytearray "^0.1.0"
+    xmlhttprequest "^1.8.0"
+
+uport-lite@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/uport-lite/-/uport-lite-0.2.3.tgz#3657e92418a0863b56201ee401dc4dc103a2f19c"
   dependencies:
     base-x-bytearray "^0.1.0"
     xmlhttprequest "^1.8.0"
