@@ -31,7 +31,11 @@ class Navbar extends Component {
   }
 
   credentialsbtnClick () {
-    uport.attestCredentials({sub: this.props.uport.address, claim: {name: this.props.uport.name}, exp: new Date().getTime() + 2592000000}) // 30days
+    // TODO when uport-connect is updated the following line should be all thats necessary
+    // uport.attestCredentials({sub: this.props.uport.address, claim: {name: this.props.uport.name}, exp: new Date().getTime() + 2592000000}) // 30days
+    uport.credentials.attest({sub: this.props.uport.address, claim: {name: this.props.uport.name}, exp: new Date().getTime() + 2592000000}).then(attestation => {
+      uport.credentials.push(this.props.uport.pushToken, {url:`me.uport:add?attestations=${encodeURIComponent(attestation)}`})
+    })
   }
 
   render () {
