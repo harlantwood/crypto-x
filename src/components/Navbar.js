@@ -16,24 +16,18 @@ class Navbar extends Component {
 
   constructor (props) {
     super(props)
-    this.signInbtnClick = this.signInbtnClick.bind(this)
     this.credentialsbtnClick = this.credentialsbtnClick.bind(this)
   }
 
-  signInbtnClick () {
-    console.log(uport)
-    uport
-      .requestCredentials({requested: ['name', 'phone', 'country'], notifications: true})
-      .then((credentials) => {
-        this.props.actions.connectUport(credentials)
-        console.log(this.props, this.state)
-      })
-  }
-
   credentialsbtnClick () {
-    uport.attestCredentials({sub: this.props.uport.address, claim: {name: this.props.uport.name}, exp: new Date().getTime() + 2592000000}) // 30days
+    uport.attestCredentials({
+      sub: this.props.uport.address,
+      claim: {name: this.props.uport.name},
+      exp: new Date().getTime() + 2592000000
+    }) // 30days
+
     if (uport.pushToken) {
-      alert('Your credentials were sent directly to your phone')
+      window.alert('Your credentials were sent directly to your phone')
     }
   }
 
@@ -48,10 +42,7 @@ class Navbar extends Component {
           {
             !this.props.uport
               ? (
-                <button
-                  style={{cursor: 'pointer'}}
-                  onClick={() => this.signInbtnClick()}
-                  className='btn btn-primary btn-md ml-auto p-2'>SIGN IN</button>
+                <div />
               )
               : (
                 <div>
@@ -89,15 +80,15 @@ class Navbar extends Component {
                   <span>&nbsp;&nbsp;</span>
                   {this.props.uport.image
                    ? <img
-                    style={{
-                      display: 'inline-block',
-                      borderRadius: '50%',
-                      width: '50px',
-                      height: '50px',
-                      border: '2px solid white'
-                    }}
-                    alt='user-img'
-                    src={
+                     style={{
+                       display: 'inline-block',
+                       borderRadius: '50%',
+                       width: '50px',
+                       height: '50px',
+                       border: '2px solid white'
+                     }}
+                     alt='user-img'
+                     src={
                       'https://ipfs.infura.io' +
                       this.props.uport.image.contentUrl} />
                   : null }

@@ -1,4 +1,9 @@
-.App {}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
 
 .App-header {
   background-color: #222;
@@ -16,6 +21,69 @@
 .App-body {
   padding: 1rem;
   color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-body-intro {}
+.App-body-intro {
+  text-align: center;
+  max-width: 720px;
+}
+
+#signInModal button,
+#signInModal input {
+  width: 200px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+#signInModal h2 {
+  color: black;
+}
+#signInModal .fb-btn {
+  background: #334CA1;
+  cursor: not-allowed;
+}
+#signInModal .uport-btn {
+  background: #00AFFF;
+}
+#signInModal .form-btn {
+  background: #B1B0B1;
+}
+
+#signInModal *:disabled {
+  cursor: not-allowed;
+}
+
+/* MODAL STUFF */
+.absolutecentercontent .Absolute-Center.is-Variable {
+  display: table;
+  height: auto;
+}
+.Absolute-Center.is-Fixed {
+  position: fixed;
+  z-index: 999;
+}
+.Modal {
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.Center-Block {
+  padding: 20px;
+}
+.Absolute-Center {
+  height: 50%;
+  width: 25%;
+  min-width: 340px;
+  min-height: 320px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
