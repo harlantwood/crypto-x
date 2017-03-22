@@ -1,6 +1,10 @@
 ###### Getting started
-`Git Clone -> Yarn -> Make sure you have surge permissions from Andres`
+`Git Clone -> Yarn`
 ###### Development
 `npm run start`
 ###### Deployment
-`npm run deploy`
+(you need S3 permissions for this)
+
+`npm run deploy` (to crypto-x.uport.me)
+
+`npm run deploy-test` (to crypto-x.uport.space)
