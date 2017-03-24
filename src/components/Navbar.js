@@ -23,8 +23,8 @@ class Navbar extends Component {
     uport.attestCredentials({
       sub: this.props.uport.address,
       claim: {name: this.props.uport.name},
-      exp: new Date().getTime() + 2592000000
-    }) // 30days
+      exp: new Date().getTime() + 30 * 24 * 60 * 60 * 1000  // 30 days from now
+    })
 
     if (uport.pushToken) {
       window.alert('Your credentials were sent directly to your phone')
